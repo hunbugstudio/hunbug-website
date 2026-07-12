@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Hunbug Games — independent games with atmosphere, mystery and character." />
+  <meta name="theme-color" content="#080808" />
+
+  <title>Hunbug Games</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080808;
+      --text: #f1eee5;
+      --muted: #aaa79f;
+      --line: rgba(241, 238, 229, 0.18);
+      --line-strong: rgba(241, 238, 229, 0.48);
+      --focus: #f1eee5;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.045), transparent 31rem),
+        var(--bg);
+      color: var(--text);
+      font-family: "Manrope", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .site-shell {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      color: inherit;
+      font-family: "Unbounded", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .language-switcher {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .language-switcher button {
+      border: 0;
+      padding: 8px 2px;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      transition: color 160ms ease, opacity 160ms ease;
+    }
+
+    .language-switcher button:hover {
+      color: var(--text);
+    }
+
+    .language-switcher button[aria-pressed="true"] {
+      color: var(--text);
+    }
+
+    .language-switcher button:focus-visible,
+    .signup-form input:focus-visible,
+    .signup-form button:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 4px;
+    }
+
+    .divider {
+      opacity: 0.4;
+    }
+
+    main {
+      display: grid;
+      align-items: center;
+      min-height: calc(100vh - 85px);
+      padding-block: clamp(72px, 10vw, 140px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+      gap: clamp(56px, 9vw, 132px);
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin: 0;
+      font-family: "Unbounded", sans-serif;
+      font-size: clamp(3.25rem, 8vw, 7.8rem);
+      font-weight: 500;
+      letter-spacing: -0.075em;
+      line-height: 0.9;
+      text-wrap: balance;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 34px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.4vw, 1.16rem);
+      line-height: 1.7;
+    }
+
+    .signup {
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .signup h2 {
+      margin: 0 0 8px;
+      font-family: "Unbounded", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .signup p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
+    }
+
+    .signup-form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .signup-form input {
+      min-width: 0;
+      border: 0;
+      padding: 15px 8px 15px 0;
+      background: transparent;
+      color: var(--text);
+      outline: 0;
+    }
+
+    .signup-form input::placeholder {
+      color: #77746e;
+    }
+
+    .signup-form button {
+      border: 0;
+      padding: 15px 0 15px 18px;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      transition: opacity 160ms ease, transform 160ms ease;
+    }
+
+    .signup-form button:hover {
+      opacity: 0.62;
+    }
+
+    .signup-form button:active {
+      transform: translateY(1px);
+    }
+
+    .privacy-note {
+      margin-top: 12px !important;
+      font-size: 0.72rem !important;
+    }
+
+    .footer-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: clamp(70px, 10vw, 120px);
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: #77746e;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .signup {
+        max-width: 520px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .site-shell {
+        width: min(calc(100% - 28px), var(--max-width));
+      }
+
+      .topbar {
+        min-height: 68px;
+      }
+
+      main {
+        min-height: calc(100vh - 69px);
+        padding-block: 54px 38px;
+      }
+
+      h1 {
+        font-size: clamp(3rem, 16vw, 4.7rem);
+      }
+
+      .signup-form {
+        grid-template-columns: 1fr;
+      }
+
+      .signup-form button {
+        justify-self: start;
+        padding-left: 0;
+      }
+
+      .footer-line {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-shell topbar">
+    <a class="brand" href="/" aria-label="Hunbug Games home">Hunbug Games</a>
+
+    <nav class="language-switcher" aria-label="Language selection">
+      <button type="button" data-lang-button="hu" aria-pressed="false">HUN</button>
+      <span class="divider" aria-hidden="true">/</span>
+      <button type="button" data-lang-button="en" aria-pressed="true">EN</button>
+    </nav>
+  </header>
+
+  <main class="site-shell">
+    <div>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">A new world is taking shape</p>
+          <h1 id="hero-title" data-i18n="title">Something strange is coming.</h1>
+          <p class="intro" data-i18n="intro">
+            An atmospheric point-and-click adventure about a city that remembers
+            more than it should.
+          </p>
+        </div>
+
+        <section class="signup" aria-labelledby="signup-title">
+          <h2 id="signup-title" data-i18n="signupTitle">Stay in the loop.</h2>
+          <p data-i18n="signupText">Occasional development news. No noise.</p>
+
+          <form
+            class="signup-form"
+            action="https://formsubmit.co/hunbuggames@gmail.com"
+            method="POST"
+          >
+            <label for="email" class="sr-only" data-i18n="emailLabel">Email address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              placeholder="your@email.com"
+              data-i18n-placeholder="emailPlaceholder"
+              required
+            />
+
+            <input type="hidden" name="_subject" value="New Hunbug Games mailing-list signup" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <button type="submit" data-i18n="subscribe">Subscribe →</button>
+          </form>
+
+          <p class="privacy-note" data-i18n="privacy">
+            By subscribing, you agree to receive occasional project updates.
+          </p>
+        </section>
+      </section>
+
+      <footer class="footer-line">
+        <span>© <span id="year"></span> Hunbug Games</span>
+        <span data-i18n="location">Budapest, Hungary</span>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    const translations = {
+      en: {
+        pageTitle: "Hunbug Games",
+        metaDescription: "Hunbug Games — independent games with atmosphere, mystery and character.",
+        eyebrow: "A new world is taking shape",
+        title: "Something strange is coming.",
+        intro: "An atmospheric point-and-click adventure about a city that remembers more than it should.",
+        signupTitle: "Stay in the loop.",
+        signupText: "Occasional development news. No noise.",
+        emailLabel: "Email address",
+        emailPlaceholder: "your@email.com",
+        subscribe: "Subscribe →",
+        privacy: "By subscribing, you agree to receive occasional project updates.",
+        location: "Budapest, Hungary",
+        navigationLabel: "Language selection"
+      },
+      hu: {
+        pageTitle: "Hunbug Games",
+        metaDescription: "Hunbug Games — független játékok atmoszférával, rejtélyekkel és sajátos karakterrel.",
+        eyebrow: "Egy új világ formát ölt",
+        title: "Valami különös közeleg.",
+        intro: "Atmoszférikus point-and-click kaland egy városról, amely többre emlékszik, mint kellene.",
+        signupTitle: "Maradj képben.",
+        signupText: "Alkalmanként hírek a fejlesztésről. Semmi fölösleges.",
+        emailLabel: "E-mail-cím",
+        emailPlaceholder: "email@cimed.hu",
+        subscribe: "Feliratkozás →",
+        privacy: "A feliratkozással hozzájárulsz, hogy időnként hírt kapj a projekt alakulásáról.",
+        location: "Budapest, Magyarország",
+        navigationLabel: "Nyelvválasztás"
+      }
+    };
+
+    const translatableElements = document.querySelectorAll("[data-i18n]");
+    const placeholderElements = document.querySelectorAll("[data-i18n-placeholder]");
+    const languageButtons = document.querySelectorAll("[data-lang-button]");
+    const languageNav = document.querySelector(".language-switcher");
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const year = document.querySelector("#year");
+
+    function setLanguage(language) {
+      const dictionary = translations[language] || translations.en;
+
+      document.documentElement.lang = language;
+      document.title = dictionary.pageTitle;
+      metaDescription.setAttribute("content", dictionary.metaDescription);
+      languageNav.setAttribute("aria-label", dictionary.navigationLabel);
+
+      translatableElements.forEach((element) => {
+        const key = element.dataset.i18n;
+        if (dictionary[key]) {
+          element.textContent = dictionary[key];
+        }
+      });
+
+      placeholderElements.forEach((element) => {
+        const key = element.dataset.i18nPlaceholder;
+        if (dictionary[key]) {
+          element.setAttribute("placeholder", dictionary[key]);
+        }
+      });
+
+      languageButtons.forEach((button) => {
+        const isActive = button.dataset.langButton === language;
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      localStorage.setItem("hunbug-language", language);
+    }
+
+    year.textContent = new Date().getFullYear();
+
+    languageButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.langButton);
+      });
+    });
+
+    const savedLanguage = localStorage.getItem("hunbug-language");
+    const browserLanguage = navigator.language.toLowerCase().startsWith("hu") ? "hu" : "en";
+    setLanguage(savedLanguage || browserLanguage);
+  </script>
+</body>
+</html>
