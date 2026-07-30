@@ -4,13 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>HunBug Games – Indie Point-and-Click Adventures</title>
+  <title>HUNbug Studio – Point-and-Click Games from Budapest</title>
   <meta
     name="description"
-    content="HunBug Games is an independent game studio in Budapest, creating atmospheric point-and-click adventures."
+    content="HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#080808" />
+
+  <meta name="application-name" content="HUNbug Studio" />
+  <meta name="apple-mobile-web-app-title" content="HUNbug Studio" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+  <link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <link rel="canonical" href="https://hunbug.com/" />
   <link rel="alternate" hreflang="en" href="https://hunbug.com/" />
@@ -18,22 +29,31 @@
   <link rel="alternate" hreflang="x-default" href="https://hunbug.com/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="HunBug Games" />
-  <meta property="og:title" content="HunBug Games – Indie Point-and-Click Adventures" />
+  <meta property="og:site_name" content="HUNbug Studio" />
+  <meta property="og:title" content="HUNbug Studio – Point-and-Click Games from Budapest" />
   <meta
     property="og:description"
-    content="HunBug Games is an independent game studio in Budapest, creating atmospheric point-and-click adventures."
+    content="HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games."
   />
   <meta property="og:url" content="https://hunbug.com/" />
+  <meta property="og:image" content="https://hunbug.com/social-preview.png" />
+  <meta property="og:image:secure_url" content="https://hunbug.com/social-preview.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="HUNbug Studio logo and BUDAPEST: AFTER title" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="hu_HU" />
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="HunBug Games – Indie Point-and-Click Adventures" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="HUNbug Studio – Point-and-Click Games from Budapest" />
   <meta
     name="twitter:description"
-    content="HunBug Games is an independent game studio in Budapest, creating atmospheric point-and-click adventures."
+    content="HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games."
   />
+  <meta name="twitter:site" content="@hunbugstudio" />
+  <meta name="twitter:image" content="https://hunbug.com/social-preview.png" />
+  <meta name="twitter:image:alt" content="HUNbug Studio logo and BUDAPEST: AFTER title" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,66 +63,108 @@
   />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://hunbug.com/#organization",
-        "name": "HunBug Games",
-        "url": "https://hunbug.com/",
-        "email": "hunbuggames@gmail.com",
-        "location": {
-          "@type": "Place",
-          "name": "Budapest, Hungary"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://hunbug.com/#organization",
+      "name": "HUNbug Studio",
+      "alternateName": "HUNbug",
+      "url": "https://hunbug.com/",
+      "description": "HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games.",
+      "email": "hunbugstudio@gmail.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://hunbug.com/#logo",
+        "url": "https://hunbug.com/logo-square.png",
+        "contentUrl": "https://hunbug.com/logo-square.png",
+        "width": 1024,
+        "height": 1024
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://hunbug.com/#website",
-        "url": "https://hunbug.com/",
-        "name": "HunBug Games",
-        "publisher": {
-          "@id": "https://hunbug.com/#organization"
-        },
-        "inLanguage": ["en", "hu"]
+      "image": {
+        "@id": "https://hunbug.com/#logo"
       },
-      {
-        "@type": "VideoGame",
-        "@id": "https://hunbug.com/#budapest-nihil",
-        "name": "Budapest: N.I.H.I.L.",
-        "alternateName": "Budapest NIHIL",
-        "url": "https://hunbug.com/",
-        "description": "A point-and-click adventure about Budapest, as no living soul has ever seen it.",
-        "genre": [
-          "Point-and-click adventure",
-          "Adventure game"
-        ],
-        "publisher": {
-          "@id": "https://hunbug.com/#organization"
-        }
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Budapest",
+        "addressCountry": "HU"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://hunbug.com/#webpage",
-        "url": "https://hunbug.com/",
-        "name": "HunBug Games – Indie Point-and-Click Adventures",
-        "description": "HunBug Games is an independent game studio in Budapest, creating atmospheric point-and-click adventures.",
-        "isPartOf": {
-          "@id": "https://hunbug.com/#website"
-        },
-        "about": [
-          {
-            "@id": "https://hunbug.com/#organization"
-          },
-          {
-            "@id": "https://hunbug.com/#budapest-nihil"
-          }
-        ],
-        "inLanguage": "en"
+      "sameAs": [
+        "https://www.facebook.com/hunbugstudio",
+        "https://www.instagram.com/hunbugstudio/",
+        "https://www.youtube.com/@hunbugstudio",
+        "https://x.com/hunbugstudio",
+        "https://www.tiktok.com/@hunbugstudio",
+        "https://bsky.app/profile/hunbugstudio",
+        "https://itch.io/profile/hunbugstudio"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hunbug.com/#website",
+      "url": "https://hunbug.com/",
+      "name": "HUNbug Studio",
+      "alternateName": "HUNbug",
+      "publisher": {
+        "@id": "https://hunbug.com/#organization"
+      },
+      "inLanguage": [
+        "en",
+        "hu"
+      ]
+    },
+    {
+      "@type": "VideoGame",
+      "@id": "https://hunbug.com/#budapest-after",
+      "name": "BUDAPEST: AFTER",
+      "alternateName": "Budapest: After",
+      "url": "https://hunbug.com/",
+      "description": "A point-and-click adventure about Budapest, as no living soul has ever seen it.",
+      "genre": [
+        "Point-and-click adventure",
+        "Adventure game"
+      ],
+      "creator": {
+        "@id": "https://hunbug.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://hunbug.com/#organization"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hunbug.com/#webpage",
+      "url": "https://hunbug.com/",
+      "name": "HUNbug Studio – Point-and-Click Games from Budapest",
+      "description": "HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games.",
+      "isPartOf": {
+        "@id": "https://hunbug.com/#website"
+      },
+      "publisher": {
+        "@id": "https://hunbug.com/#organization"
+      },
+      "about": [
+        {
+          "@id": "https://hunbug.com/#organization"
+        },
+        {
+          "@id": "https://hunbug.com/#budapest-after"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://hunbug.com/#budapest-after"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://hunbug.com/social-preview.png",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": "en"
+    }
+  ]
+}
   </script>
 
   <style>
@@ -253,7 +315,7 @@
       font-family: "Unbounded Local", "Unbounded", sans-serif;
       font-size: clamp(2.25rem, 4vw, 4rem);
       font-weight: 500;
-      letter-spacing: -0.07em;
+      letter-spacing: 0.05em;
       line-height: 0.98;
       text-wrap: balance;
       overflow-wrap: normal;
@@ -467,7 +529,7 @@
 
 <body>
   <header class="site-shell topbar">
-    <a class="brand" href="/" aria-label="HunBug Games home">
+    <a class="brand" href="/" aria-label="HUNbug Studio home">
   <img
     class="brand-logo"
     src="/logo.png"
@@ -475,7 +537,7 @@
     width="35"
     height="35"
   />
-  <span>HunBug Games</span>
+  <span>HUNbug Studio</span>
 </a>
 
     <nav class="language-switcher" aria-label="Language selection">
@@ -490,7 +552,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Mind the gap between worlds...</p>
-          <h1 id="hero-title"><span class="title-part">BUDAPEST:</span> <span class="title-part">N.I.H.I.L<span class="final-dot">.</span></span></h1>
+          <h1 id="hero-title"><span class="title-part">BUDAPEST:</span> <span class="title-part">AFTER</span></h1>
           <p class="intro">
             A point-and-click adventure about Budapest, as no living soul has ever seen it.
           </p>
@@ -502,7 +564,7 @@
 
           <form
             class="signup-form"
-            action="https://formsubmit.co/hunbuggames@gmail.com"
+            action="https://formsubmit.co/hunbugstudio@gmail.com"
             method="POST"
           >
             <label for="email" class="sr-only">Email address</label>
@@ -516,7 +578,7 @@
               required
             />
 
-            <input type="hidden" name="_subject" value="New HunBug Games mailing-list signup" />
+            <input type="hidden" name="_subject" value="New HUNbug Studio mailing-list signup" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
@@ -529,14 +591,14 @@
           </p>
 
           <p class="studio-description">
-            HunBug Games is an independent game studio in Budapest, creating atmospheric point-and-click adventures.
+            HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games.
           </p>
         </section>
       </section>
 
       <footer class="footer-line">
-        <span>© <span id="year"></span> HunBug Games</span>
-        <a href="mailto:hunbuggames@gmail.com">CONTACT: hunbuggames@gmail.com</a>
+        <span>© <span id="year"></span> HUNbug Studio</span>
+        <a href="mailto:hunbugstudio@gmail.com">CONTACT: hunbugstudio@gmail.com</a>
         <span>Budapest, Hungary</span>
       </footer>
     </div>
