@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>HUNbug Studio – Point-and-Click Games from Budapest</title>
+  <title>HUNbug Studio – Point-and-Click Adventure Games from Budapest</title>
   <meta
     name="description"
     content="HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games."
@@ -36,23 +36,23 @@
     content="HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games."
   />
   <meta property="og:url" content="https://hunbug.com/" />
-  <meta property="og:image" content="https://hunbug.com/social-preview.png" />
-  <meta property="og:image:secure_url" content="https://hunbug.com/social-preview.png" />
+  <meta property="og:image" content="https://hunbug.com/bp-after-logo-square-noborder.png" />
+  <meta property="og:image:secure_url" content="https://hunbug.com/bp-after-logo-square-noborder.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:width" content="2048" />
+  <meta property="og:image:height" content="2048" />
   <meta property="og:image:alt" content="HUNbug Studio logo and BUDAPEST: AFTER title" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="hu_HU" />
 
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="HUNbug Studio – Point-and-Click Games from Budapest" />
   <meta
     name="twitter:description"
     content="HUNbug Studio is an independent game developer based in Budapest, creating atmospheric point-and-click adventure games."
   />
   <meta name="twitter:site" content="@hunbugstudio" />
-  <meta name="twitter:image" content="https://hunbug.com/social-preview.png" />
+  <meta name="twitter:image" content="https://hunbug.com/bp-after-logo-square-noborder.png" />
   <meta name="twitter:image:alt" content="HUNbug Studio logo and BUDAPEST: AFTER title" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -157,9 +157,9 @@
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://hunbug.com/social-preview.png",
-        "width": 1200,
-        "height": 630
+        "url": "https://hunbug.com/bp-after-logo-square-noborder.png",
+        "width": 2048,
+        "height": 2048
       },
       "inLanguage": "en"
     }
@@ -239,7 +239,7 @@
       font-weight: 500;
       letter-spacing: 0.16em;
       text-decoration: none;
-      text-transform: uppercase;
+      text-transform: none;
     }
 
 .brand-logo {
@@ -415,6 +415,48 @@
       line-height: 1.65;
     }
 
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: clamp(70px, 10vw, 120px);
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      color: #77746e;
+      text-decoration: none;
+      transition: color 160ms ease, transform 160ms ease;
+    }
+
+    .social-links a:hover {
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .social-links a:focus-visible {
+      outline: 2px solid var(--focus);
+      outline-offset: 5px;
+    }
+
+    .social-links svg {
+      display: block;
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .social-links + .footer-line {
+      margin-top: 24px;
+    }
+
     .footer-line {
       display: flex;
       align-items: baseline;
@@ -498,7 +540,7 @@
 
       h1 {
         font-size: clamp(2.35rem, 10.5vw, 3.4rem);
-        letter-spacing: -0.075em;
+        letter-spacing: 0.05em;
       }
 
       .signup-form {
@@ -578,6 +620,9 @@
               required
             />
 
+            <input type="hidden" name="language" value="en" />
+            <input type="hidden" name="source" value="hunbug-en" />
+
             <input type="hidden" name="_subject" value="New HUNbug Studio mailing-list signup" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
@@ -596,10 +641,36 @@
         </section>
       </section>
 
-      <footer class="footer-line">
+      <footer>
+        <!-- Brand icons: Font Awesome Free 6.7.2, CC BY 4.0 — https://fontawesome.com/license/free -->
+        <nav class="social-links" aria-label="HUNbug Studio social media">
+          <a href="https://www.facebook.com/hunbugstudio" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/hunbugstudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+          </a>
+          <a href="https://x.com/hunbugstudio" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@hunbugstudio" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 576 512" aria-hidden="true" focusable="false"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@hunbugstudio" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+          </a>
+          <a href="https://bsky.app/profile/hunbugstudio" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+            <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
+          </a>
+          <a href="https://itch.io/profile/hunbugstudio" target="_blank" rel="noopener noreferrer" aria-label="itch.io">
+            <svg viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M71.92 34.77C50.2 47.67 7.4 96.84 7 109.73v21.34c0 27.06 25.29 50.84 48.25 50.84 27.57 0 50.54-22.85 50.54-50 0 27.12 22.18 50 49.76 50s49-22.85 49-50c0 27.12 23.59 50 51.16 50h.5c27.57 0 51.16-22.85 51.16-50 0 27.12 21.47 50 49 50s49.76-22.85 49.76-50c0 27.12 23 50 50.54 50 23 0 48.25-23.78 48.25-50.84v-21.34c-.4-12.9-43.2-62.07-64.92-75C372.56 32.4 325.76 32 256 32S91.14 33.1 71.92 34.77zm132.32 134.39c-22 38.4-77.9 38.71-99.85.25-13.17 23.14-43.17 32.07-56 27.66-3.87 40.15-13.67 237.13 17.73 269.15 80 18.67 302.08 18.12 379.76 0 31.65-32.27 21.32-232 17.75-269.15-12.92 4.44-42.88-4.6-56-27.66-22 38.52-77.85 38.1-99.85-.24-7.1 12.49-23.05 28.94-51.76 28.94a57.54 57.54 0 0 1-51.75-28.94zm-41.58 53.77c16.47 0 31.09 0 49.22 19.78a436.91 436.91 0 0 1 88.18 0C318.22 223 332.85 223 349.31 223c52.33 0 65.22 77.53 83.87 144.45 17.26 62.15-5.52 63.67-33.95 63.73-42.15-1.57-65.49-32.18-65.49-62.79-39.25 6.43-101.93 8.79-155.55 0 0 30.61-23.34 61.22-65.49 62.79-28.42-.06-51.2-1.58-33.94-63.73 18.67-67 31.56-144.45 83.88-144.45zM256 270.79s-44.38 40.77-52.35 55.21l29-1.17v25.32c0 1.55 21.34.16 23.33.16 11.65.54 23.31 1 23.31-.16v-25.28l29 1.17c-8-14.48-52.35-55.24-52.35-55.24z"/></svg>
+          </a>
+        </nav>
+        <div class="footer-line" data-nosnippet>
         <span>© <span id="year"></span> HUNbug Studio</span>
         <a href="mailto:hunbugstudio@gmail.com">CONTACT: hunbugstudio@gmail.com</a>
         <span>Budapest, Hungary</span>
+        </div>
       </footer>
     </div>
   </main>
